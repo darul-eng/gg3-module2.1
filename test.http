@@ -1,0 +1,11 @@
+### GET home
+GET http://localhost:3000
+Accept: application/json
+
+### Get About
+GET http://localhost:3000/about
+Accept: application/json
+
+### Get Error
+GET http://localhost:3000/abcd
+Accept: application/json

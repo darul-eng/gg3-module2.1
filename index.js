@@ -3,15 +3,37 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-    res.send('Hello GG-3!')
+    res.json({
+        meta: {
+            status: 200,
+            message: "Success",
+        },
+        data: {
+            message: "Hallo GG-3"
+        }
+    });
 });
 
 app.get('/about', (req, res) => {
-    res.send('Solusi bagi talenta muda Indonesia')
+    res.json({
+        meta: {
+            status: 200,
+            message: "Success",
+        },
+        data: {
+            message: "Solusi bagi talenta muda Indonesia"
+        }
+    });
 });
 
 app.use((req, res) => {
-    res.status(404).send('Page not found');
+    res.json({
+        meta: {
+            status: 404,
+            message: "Page not found",
+        },
+        data: null
+    });
 });
 
 app.listen(port, () => {

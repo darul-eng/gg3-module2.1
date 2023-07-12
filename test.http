@@ -17,3 +17,17 @@ Accept: application/json
 ### tes query params
 GET http://localhost:3000/query-param?page=1
 Accept: application/json
+
+### request body
+POST http://localhost:3000/request-body
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Darul Ikhsan"
+}
+
+### write body
+POST http://localhost:3000/write-body
+Accept: application/json
+Content-Type: application/json

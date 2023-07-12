@@ -9,3 +9,11 @@ Accept: application/json
 ### Get Error
 GET http://localhost:3000/abcd
 Accept: application/json
+
+### tes param
+GET http://localhost:3000/users/darul@gmail.com
+Accept: application/json
+
+### tes query params
+GET http://localhost:3000/query-param?page=1
+Accept: application/json

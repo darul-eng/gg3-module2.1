@@ -26,6 +26,32 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/users/:email', (req, res) => {
+    let email = req.params.email;
+    res.json({
+        meta: {
+            status: 200,
+            message: "Success",
+        },
+        data: {
+            message: `Return user detail with email: ${email}`
+        }
+    });
+})
+
+app.get('/query-param', (req, res) => {
+    let page = req.query.page;
+    res.json({
+        meta: {
+            status: 200,
+            message: "Success",
+        },
+        data: {
+            message: `Return page ${page}`
+        }
+    });
+})
+
 app.use((req, res) => {
     res.json({
         meta: {
